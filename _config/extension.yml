@@ -1,0 +1,11 @@
+SilverStripe\ORM\DataObject:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 1
+  keep_drafts: 0
+
+SilverStripe\CMS\Model\SiteTree:
+  keep_versions: 10
+  keep_drafts: 0
+  keep_redirects: true
+

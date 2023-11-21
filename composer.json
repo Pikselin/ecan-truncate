@@ -1,0 +1,33 @@
+{
+    "name": "pikselin/ecan-truncate",
+    "description": "Automatically delete old versioned Silverstripe records from the database - edited to exclude file and image objects",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/Pikselin/ecan-truncate",
+    "keywords": [
+        "silverstripe",
+        "framework",
+        "sitetree",
+        "dataobject",
+        "database",
+        "performance",
+        "versioned"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralph Slooten",
+            "homepage": "https://www.axllent.org/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/axllent/silverstripe-version-truncator/issues"
+    },
+    "require": {
+        "silverstripe/framework": "^4.5 || ^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Axllent\\VersionTruncator\\": "src/"
+        }
+    }
+}
