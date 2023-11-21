@@ -1,7 +1,7 @@
 SilverStripe\ORM\DataObject:
   extensions:
     - Axllent\VersionTruncator\VersionTruncator
-  keep_versions: 1
+  keep_versions: 0
   keep_drafts: 0
 
 SilverStripe\CMS\Model\SiteTree:
@@ -9,3 +9,25 @@ SilverStripe\CMS\Model\SiteTree:
   keep_drafts: 0
   keep_redirects: true
 
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 10
+  keep_drafts: 10
+
+FloodWarningPage:
+  keep_versions: 0
+  keep_drafts: 0
+  keep_redirects: true
+
+SilverStripe\Assets\Image:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 0
+  keep_drafts: 0
+
+SilverStripe\Assets\File:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 0
+  keep_drafts: 0

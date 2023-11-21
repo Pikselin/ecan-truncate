@@ -1,3 +1,51 @@
+# Modified version
+
+this modified module excludes the Image and File base objects from the truncate process due to causing an SQL prepared statement error.
+
+Base config has also been modified to fit in with ECANs requirements
+
+- Only truncate Elemental block objects
+- Do not truncate FloodWarningPage objects
+- Image and File config left in yml 'just in case'
+
+
+```json
+SilverStripe\ORM\DataObject:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 0
+  keep_drafts: 0
+
+SilverStripe\CMS\Model\SiteTree:
+  keep_versions: 10
+  keep_drafts: 0
+  keep_redirects: true
+
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 10
+  keep_drafts: 10
+
+FloodWarningPage:
+  keep_versions: 0
+  keep_drafts: 0
+  keep_redirects: true
+
+SilverStripe\Assets\Image:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 0
+  keep_drafts: 0
+
+SilverStripe\Assets\File:
+  extensions:
+    - Axllent\VersionTruncator\VersionTruncator
+  keep_versions: 0
+  keep_drafts: 0
+
+```
+
 # Version truncator for Silverstripe
 
 An extension for Silverstripe to automatically delete old versioned DataObject records from your database when a record is published, following predefined retention policies (see [configuration](#configuration)).
@@ -30,7 +78,7 @@ The tasks can be run via `/dev/tasks/TruncateVersionsTask`.
 
 ## Installation
 
-`composer require axllent/silverstripe-version-truncator`
+`composer require pikselin/ecan-truncate`
 
 
 ## Configuration
