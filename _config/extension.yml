@@ -6,7 +6,7 @@ SilverStripe\ORM\DataObject:
 
 SilverStripe\CMS\Model\SiteTree:
   keep_versions: 10
-  keep_drafts: 0
+  keep_drafts: 10
   keep_redirects: true
 
 DNADesign\Elemental\Models\BaseElement:
