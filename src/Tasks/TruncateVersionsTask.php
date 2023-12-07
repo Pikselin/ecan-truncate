@@ -118,7 +118,11 @@ class TruncateVersionsTask extends BuildTask
         $total = 0;
 
         foreach ($classes as $class) {
-            if ($class != 'SilverStripe\Assets\Image' && $class != 'SilverStripe\Assets\File') {
+            if (
+                $class != 'SilverStripe\Assets\Image' 
+                && $class != 'SilverStripe\Assets\File'
+                && $class != 'FloodWarningPage'
+            ) {
 
 
                 $records = Versioned::get_by_stage($class, Versioned::DRAFT);
