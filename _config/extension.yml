@@ -16,8 +16,8 @@ DNADesign\Elemental\Models\BaseElement:
   keep_drafts: 10
 
 FloodWarningPage:
-  keep_versions: 0
-  keep_drafts: 0
+  keep_versions: 1000
+  keep_drafts: 1000
   keep_redirects: true
 
 SilverStripe\Assets\Image:
