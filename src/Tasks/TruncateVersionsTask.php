@@ -146,9 +146,12 @@ class TruncateVersionsTask extends BuildTask
 
                     $total += $deleted;
                 }
+                
+            } else {
+                DB::alteration_message('SKIPPED, '. $class);
             }
 
-            DB::alteration_message('Completed, '. $class .' : pruned ' . $total . ' records');
+            
         }
     }
 
